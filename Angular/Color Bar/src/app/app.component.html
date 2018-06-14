@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container" style="text-align:center">
+  <h1>Retro Barcode Generator</h1>
+</div>
+<div class="main">
+  <h2>Colors</h2>
+  <div *ngFor = "let color of colors">
+    <div [ngStyle] ="{'height':'75px', 'width':'75px','background-color':color, 'display':'inline-block'}">{{color.color}}</div>
+  </div>
+</div>
+
+
+
