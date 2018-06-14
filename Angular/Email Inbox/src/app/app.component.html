@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dojo Mail</title>
+</head>
+<body>
+  <div id="wrapper">
+   <h1>Dojo Mail</h1>
+    <table>
+      <thead>
+        <th>Email</th>
+        <th>Importance</th>
+        <th>Subject</th>
+        <th>Content</th>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let email of emails">
+          <td>{{email.email | lowercase}}</td>
+          <td>
+            <p *ngIf="email.important">High</p>
+            <p *ngIf="!email.important">Low</p>
+          </td>
+          <td>{{email.subject}}</td>
+          <td>{{email.content}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>
